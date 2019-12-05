@@ -1,0 +1,64 @@
+Working on the pciture 59-11 for the stage1. 
+
+
+f01 - pixels around the face bounds 
+
+Applying the plugin binary_Layer_0 does not produce a good result, as intead of finding the boundaries of the face, it highlights 
+the skin as evidenced with dark colors in the skin area. Picture name - 59-11_Binary_Layer_0_FirstAttempt. 
+
+Thus, tried to apply Gaussian blur with 2.00 radius and than apply plugin0. The result was some or less better, but still the skin area of the face was noticeably selected instead of boundary. Picture - 59-11-Binary_Layer_0_SecondAttempt.
+
+The next I have tried to apply maximum filter with 5 radius, than gaussian blur with 1 radius, after plugin0. The result was as seen in the picture 59-11-Binary_Layer_0_ThirdAttempt. Again not satisfactory result with skin of the face majorly selected. 
+
+Next attempt - Gaussian blur with 2 radius, maximum filter with 10 radius, gaussian blur with 2 radius, plugin0. The result agais is not satisfactory with hair boundaries all gone, and skin selected, however, the boundaries till the hair are very nicely highloghted. Picture - 59-11-Binary_Layer_0_FourthAttempt.  
+
+Next attempt - 6.5 maximum filter, 8 gaussian blur, plugin0. The picture 59-11-Binary_Layer_0_FifthAttempt. 
+
+Next Attempt - 6.5 maximum filter, 8 gaussian blur, plugin 0, maximum filter 1 radius. The picture - 59-11-Binary_Layer_0_SixthAttempt.  
+
+
+-------------------------------------------------------------------
+
+
+f12 - the majority of skin pixels. 
+
+First attempt - plugin1 (Binary_Layer_1). The result is quite satisfactory with mainly skin area selected. Picture 59-11-Binary_Layer_1_FirstAttempt. 
+
+Next attempt - plugin1, minimum filter with 0.5 radius. Picture 
+59-11-Binary_Layer_1_SecondAttempt - smoother and more vivid selection of skin pixels.
+ 
+Next Attempt - gaussian blur 3.50 radius, unsharp mask with 3.0 radius and 0.90 mask weight, plugin1. The picture 59-11-Binary_Layer_1_ThirdAttempt.
+ 
+Next Attempt - gaussian blur 2.0 radius, plugin1. The picture 59-11-Binary_Layer_1_FourthAttempt.
+
+
+-------------------------------------------------------------------
+
+f23  - pixels from central region around the nose 
+
+First attempt - plugin2 (Binary_Layer_2). The result is mediocre, as even though the nose, eyes, mouth are selected, the ears and neck pixels also are visible. Picture 59-11-Binary_Layer_2_FirstAttempt
+
+Next Attempt - Gaussian blur with 2.0 radius, and plugin2. 
+The result is mediocre again and less satisfactory, because even
+though we can see smoothness, the selected central parts are not fully visible. Picture 59-11-Binary_Layer_2_SecondAttempt.
+
+Next Attempt - gaussian blur with 1.0 radius, unsharp mask with 2 radius and mask weight 0.3, plugin2. Better result than second attempt as better visibilty in mouth  and nose. Picture 59-11-Binary_Layer_2_ThirdAttempt. 
+
+Next Attempt - unsharp mask with 4 radius and mask weight 0.3, plugin2. The result is better in terms of nose, mouth and eyes, however the neck part pixels also got "better". Picture 59-11-Binary_Layer_2_FourthAttempt.
+
+
+
+-----------------------------------------------------------------
+
+f34 - pixels from lips and ears 
+
+First attempt - plugin3 (Binary_Layer_3). The result is not bad, the shapes of lips is not visible but some marks are pressent, the same can apply for ears. Picture 59-11-Binary_Layer_3_FirstAttempt.
+
+Next Attempt - gaussian blur with 2.0 radius, unsharp mask with 6 radius and mask weight 0.5, plugin2. The result is good, even some part of nose is also selected and ears are not smooth. Picture 59-11-Binary_Layer_3_SecondAttempt. 
+
+Next Attempt - mean 2.0, median 2.0, gaussian blur 1.0, unsharp mask with 5 radius and mask weight 0.3, plugin2. The result not satisfactory. Picture 59-11-Binary_Layer_3_ThirdAttempt. 
+
+Next Attempt - minimum filter with 3.0 radius, plugin2, minimum filter with 1.0 radius. Picture 59-11-Binary_Layer_3_FourthAttempt.  
+
+
+
