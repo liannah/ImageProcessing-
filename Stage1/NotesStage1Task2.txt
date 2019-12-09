@@ -1,0 +1,129 @@
+The general filter case description found at the end of NotesStage1Task1. 
+
+The main component for skin detection, 
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+for bourder detection
+
+The first kernel - Sobel edge detector - 1 2 1
+				         0 0 0
+			               -1 -2 -1
+and afterwards plugin0. The result Picture 61-11-Binary_Layer_0_firstkernel 
+
+The second kernel for edge detection - 1 0 -1 
+		    		       2 0 -2
+                                       1 0 -1
+and afterwards plugin0. The result Picture 61-11-Binary_Layer_0_secondkernel  
+
+------------------------------------------------------------------
+For skin detetction
+
+The first kernel - -1 -1 -1
+                   -1  12 -1
+                   -1 -1 -1
+and afterwards plugin1. The result Picture 61-11-Binary_Layer_1_firstkernel. Similar result in task1 generalized algorithm. 
+
+-------------------------------------------------------------------
+The same above kernel for sharpening brings the quite same with a little more noise result as in the generalized algorithm. 
+
+Picture 61-11-Binary_Layer_2_firstkernel.  	
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+for boundery detection
+
+The first kernel - Sobel edge detector - 1 2 1
+				         0 0 0
+			               -1 -2 -1
+and afterwards plugin0. The result Picture 59-11-Binary_Layer_0_firstkernel
+
+The second kernel for edge detection - 1 0 -1 
+		    		       2 0 -2
+                                       1 0 -1
+and afterwards plugin0. The result Picture 59-11-Binary_Layer_0_secondkernel 
+
+------------------------------------------------------------------
+For skin detection
+
+The first kernel - -1 -1 -1
+                   -1  12 -1
+                   -1 -1 -1
+and afterwards plugin1. The result Picture 59-11-Binary_Layer_1_firstkernel. The result is great, as the kernel does exactly what is needed sharpens the skin tone area, similar result in task1 generalized algorithm. 
+
+-------------------------------------------------------------------
+for central region 
+
+
+The same above kernel for sharpening brings the same result as in the generalized algorithm. 
+
+Picture 59-11-Binary_Layer_2_firstkernel.  
+
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+The first kernel - Sobel edge detector - 1 2 1
+				         0 0 0
+			               -1 -2 -1
+and afterwards plugin0. The result Picture 60-11-Binary_Layer_0_firstkernel
+
+The second kernel for edge detection - 1 0 -1 
+		    		       2 0 -2
+                                       1 0 -1
+and afterwards plugin0. The result Picture 60-11-Binary_Layer_0_secondkernel. 
+
+-------------------------------------------------------------------
+
+for central region
+
+The same above kernel for sharpening brings the quite same with a little more noise result as in the generalized algorithm, see picture 60-11_Binary_layer_2_Thirdattempt. 
+
+Picture 60-11-Binary_Layer_2_firstkernel. 
+
+-------------------------------------------------------------------
+for skin detection
+
+The first kernel - -1 -1 -1
+                   -1  12 -1
+                   -1 -1 -1
+and afterwards plugin1. The result Picture 60-11-Binary_Layer_1_firstkernel. The result is not bad, but we cannot say its great, similar to the gerenalized algorithm described in task1.
+
+
+
+
+
+-------------------------------------------------------------------
+
+The first kernel - Sobel edge detector - 1 2 1
+				         0 0 0
+			               -1 -2 -1
+and afterwards plugin0. The result Picture 62-11-Binary_Layer_0_firstkernel
+
+The second kernel for edge detection - 1 0 -1 
+		    		       2 0 -2
+                                       1 0 -1
+and afterwards plugin0. The result Picture 62-11-Binary_Layer_0_secondkernel
+
+-------------------------------------------------------------------
+
+for skin detection
+
+The first kernel - -1 -1 -1
+                   -1  12 -1
+                   -1 -1 -1
+and afterwards plugin1. The result Picture 62-11-Binary_Layer_1_firstkernel. Poor result, similar to the general algorithm described in task1.  
+
+-------------------------------------------------------------------
+
+for central detection 
+
+The same above kernel for sharpening brings the quite same with a little more noise result as in the generalized algorithm 
+
+Picture 62-11-Binary_Layer_2_firstkernel. 
+
+
+
+
+-------------------------------------------------------------------
+------------------------------------------------------------------- 

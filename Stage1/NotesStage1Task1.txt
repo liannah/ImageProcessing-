@@ -185,15 +185,23 @@ If not achieved the result immediately after applying plugins ->
 
 Conclusion - 
 
-f01 - gaussian blur, maximum filter, unsharp mask, plugin0, if necessary one more time maximum filter. 
+f01 - gaussian blur, maximum filter, unsharp mask, plugin0, if necessary one more time maximum filter.
 
-f12 - gaussian blur, minimum filter, plugin. 
+The reasoning behind is that we need to sharpen the edges which should be a little darker than the background part, thus to get it we need to blur the message and apply maximum filter to get the maximum pixels of surrounding, afterwards unsharp the image to make the edges more noticable and than apply plugin0.  
+
+f12 - gaussian blur, minimum filter, plugin1. 
+
+The reasoning behind is to blur the image to get more smoothened picture, afterwards apply minimum filter to get the minimum pixels of the surrounding trying to guarantee that skin area will be more noticable by the algorithm, and than apply algorithm of plugin1. 
+
 
 f23 - unsharp mask with higher than 0.3 weight, plugin2. 
 
+The reasoning behind is to get the unsharp edges as much as possible before applying plugin2. 
+
+
 f34 - minimum filter (optional), unsharp mask with less than 0.4 weight. 
 
-
+The reasoning behind is to again get the unsharp edges as noticable as possible for the algorithm. 
 
 
 
