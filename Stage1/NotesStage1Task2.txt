@@ -122,6 +122,19 @@ The same above kernel for sharpening brings the quite same with a little more no
 
 Picture 62-11-Binary_Layer_2_firstkernel. 
 
+-------------------------------------------------------------------
+
+Also for lips the same sharpening Kernel is used. The results are similar to the generalized algorithm as evidenced by pictures. 
+
+
+-------------------------------------------------------------------
+
+The reasoning behind using sharpening kernel for tone selection is because for the last three generalizations, the key point was to sharpen the places inside the skin area for the algorithm to detect them, thus it is reasonable that the kernel which sharpens (makes the picture less blury and more precise) produces the same result. 
+
+As for the boundary detection, the key here is to make edges more noticable, thus it is reasonble to use known edge detection kernels. 
+
+
+ 
 
 
 

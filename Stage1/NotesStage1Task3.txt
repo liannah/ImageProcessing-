@@ -1,0 +1,19 @@
+
+For the smile - 
+
+It is obvious that while applying plugin0, if the person is smiling the teeth are detected and shown as dark edges, which is kind of reasoble as the teeth have different tone color than the skin and very mush differ from the whole picture, and should be detected by the filter. Also one can argue that the smile helpes the filter to detect edges of the face better as evidenced by the 59-61 pictures, and 62 case ate least after applying the plugin0, the area of the mouse is white ))
+Picture - xx-12-Binary_Layer_0_smile
+
+For the rotation - 
+
+The plugin0, works fairly good with no changes, providing the result similar to the straight images. 
+The noticable change occurs as in the picture 61-01-Binary_Layer_0_rotate, where the skin area is noticable selected as the line goes from the mouth to the hair, thus failing to get the boundary region precisely. The reason behind it can be the fact that as the face is rotated 90 degrees, the plugin0 is not very well able to detect the region of hair as precisely as it was without rotation. 
+
+
+The plugin1 works not bad, as evidenced by the pictures and gives the same or better result compared to straight pictures. 
+Interestingly enough, the regions which are not detected by the plugin0, is detected by the plugin1, thus plugin0 and plugin1 seems to get the contr regions of each other (meaning the ones which are left white by plugin0 are now noticeably black for plugin1, and the ones black after plugin0 are now white). Compare pictures 61-01-Binary_Layer_0_rotate and 61-01-Binary_Layer_1_rotate.
+
+
+The plugin2 works fine with the detection of the ear better with 90 degrees rotated pictures, and similar result for the rest as was in the straight picture.
+
+The plugin3 lacks the exactness of the straight pciture in almost all 90 degrees rotated pictures, with lips and ears (even very well opened ones) not detected and marked properly. For other rotation which near the straight position the filter works better.  
