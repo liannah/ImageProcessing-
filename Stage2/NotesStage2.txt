@@ -1,0 +1,1 @@
+I do splitting of channels via this commands Image-> Color ->Split Channels. Afterwards to get the histogram data Analyze-> Histogram->list. The plugins for matching the histograms can be found in the stage0 subfoulder (the body of the code was found in the book Chapter 4).  
