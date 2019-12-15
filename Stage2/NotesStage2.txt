@@ -1,1 +1,9 @@
-I do splitting of channels via this commands Image-> Color ->Split Channels. Afterwards to get the histogram data Analyze-> Histogram->list. The plugins for matching the histograms can be found in the stage0 subfoulder (the body of the code was found in the book Chapter 4).  
+For RGB Channels
+
+I do splitting of channels via this commands Image-> Color ->Split Channels. Afterwards to get the histogram data Analyze-> Histogram->list, the list seen in the 61-11.xlsx.The plugins for matching the histograms can be found in the stage0 subfoulder (the body of the code was found in the book Chapter 4). The reference histogram is chosen to be 61a, as 61 picture provided the exact preferred behavior. After splitting, the histogram of each channel is computed and hardcoded in the pluginred, blue, and red. 
+
+Afterwards, the other pictures are splitted, and for each channel their according plugin is applied. Than commands Image->Color->merge channels (respective names of the channels picked)-> Apply. Next Image-> Color-> Channels Tool -> More-> Convert to RGB is applied. After all these steps, the modified picture is ready for the binary plugins. 
+
+The results in all three pictures is significantly better, the only average result is after applying plugin3, which in three cases did not bring lips or ears, but rather an empty white sheet with some black marks. 
+
+FOr HSV channels 

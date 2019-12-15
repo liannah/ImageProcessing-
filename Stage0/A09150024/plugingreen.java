@@ -14,9 +14,10 @@ public void run(ImageProcessor ip) {
 
 int M = ip.getWidth();
  int N = ip.getHeight();
+int l = 256;
 
 int[] H = ip.getHistogram();
-int[] H1 = new int[]{0,1,1,42,108,220,294,358,364,499,
+double[] H1 = new double[]{0,1,1,42,108,220,294,358,364,499,
 555,653,887,1028,1218,1303,1490,1442,1414,1476,1520,1556,
 1464,1405,1400,1272,1204,1086,1000,1020,940,874,846,
 813,810,760,698,694,677,654,649,616,610,567,568,519,547,520,
@@ -32,19 +33,35 @@ int[] H1 = new int[]{0,1,1,42,108,220,294,358,364,499,
 179,127,100,110,144,189,140,95,42,11,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 
-int[] result = matchHistograms(H, H1);
+
+double[] Green = new double[H.length];
+Green[0] = H[0];
+
+for (int i = 1; i < H.length; i++){
+    H[i] = H[i-1] + H[i];
+    Green[i] = H[i];	
+    H1[i] = H1[i -1] + H[i];	
+}
+
+for (int i = 1; i < l; i++){
+     Green[i] = Green[i] / Green[l-1];
+     H1[i] = H1[i] / H1[l-1]; 	
+}
+
+
+int[] result = matchHistograms(Green, H1);
 
 for (int v = 0; v < N; v++) {
  for (int u = 0; u < M; u++) {
  int a = ip.get(u, v);
- int b = result[a]; 
+ int b = result[a];
  ip.set(u, v, b);
 }
 }
 
 }
 
-public int[] matchHistograms (int[] hA, int[] hR) {
+public int[] matchHistograms (double[] hA, double[] hR) {
 
 int K = hA.length;
  double[] PA = Cdf(hA); // get CDF of histogram hA
@@ -57,14 +74,14 @@ int K = hA.length;
  do {
  fhs[a] = j;
  j--;
- } while (j >= 0 && PA[a] <= PR[j]);
+ } while (j >= 0 && hA[a] <= hR[j]);
  }
  return fhs;
  }
 
 
 
-public double[] Cdf (int[] h) {
+public double[] Cdf (double[] h) {
  // returns the cumul. distribution function for histogram h
  int K = h.length;
 
@@ -74,7 +91,7 @@ public double[] Cdf (int[] h) {
  }
 
  double[] P = new double[K]; // create CDF table P
- int c = h[0]; // cumulate histogram values
+ double c = h[0]; // cumulate histogram values
  P[0] = (double) c / n;
  for (int i = 1; i < K; i++) {
  c += h[i];
