@@ -7,7 +7,7 @@ Picture - xx-12-Binary_Layer_0_smile
 For the rotation - 
 
 The plugin0, works fairly good with no changes, providing the result similar to the straight images. 
-The noticable change occurs as in the picture 61-01-Binary_Layer_0_rotate, where the skin area is noticable selected as the line goes from the mouth to the hair, thus failing to get the boundary region precisely. The reason behind it can be the fact that as the face is rotated 90 degrees, the plugin0 is not very well able to detect the region of hair as precisely as it was without rotation. 
+The noticable change occurs as in the picture 61-01-Binary_Layer_0_rotate, where the skin area is noticably selected as the line goes from the mouth to the hair, thus failing to get the boundary region precisely. The reason behind it can be the fact that as the face is rotated 90 degrees, the plugin0 is not very well able to detect the region of hair as precisely as it was without rotation. 
 
 
 The plugin1 works not bad, as evidenced by the pictures and gives the same or better result compared to straight pictures. 

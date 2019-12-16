@@ -14,6 +14,7 @@ Four. By cropping the picture like in 61-14aContour, and getting its contour, on
 Five. The binary_layer_2 and binary_layer_3 together give the whole feauture of the complete face parts in their regions separately(eyes, nose, mouth, and ears). I have got the result by applying plugins two 61-11 image (the best reference picture), and got very good result. Thus now, I have had the contour and face parts, the next thing I did was combine them together and get the whole picture, thus creating a feature of applying the face of different people on different bodies. Pictures 59-61-Face, 61-61-Face. 
 
 
+Six. Finding the layout of hair. Process -> Math -> Square is applied, after which we see very bright picture with mainly hair left in the picture, after that Process -> Binary -> Make Binary is applied, and we see quite good result in finding hair portions in the individual. Pictures xx-11-hair. Works good for the 90 degree rotated pictures as well. xx-11-hairRotate. 
 
 
  

@@ -1,10 +1,8 @@
-The general filter case description found at the end of NotesStage1Task1. 
-
-The main component for skin detection, 
+The general filter case description found at the end of NotesStage1Task1.   
 
 ------------------------------------------------------------------
 ------------------------------------------------------------------
-for bourder detection
+for border detection
 
 The first kernel - Sobel edge detector - 1 2 1
 				         0 0 0
@@ -17,7 +15,7 @@ The second kernel for edge detection - 1 0 -1
 and afterwards plugin0. The result Picture 61-11-Binary_Layer_0_secondkernel  
 
 ------------------------------------------------------------------
-For skin detetction
+For skin detection
 
 The first kernel - -1 -1 -1
                    -1  12 -1
@@ -140,3 +138,5 @@ As for the boundary detection, the key here is to make edges more noticable, thu
 
 -------------------------------------------------------------------
 ------------------------------------------------------------------- 
+
+All kernels used are known ones.
