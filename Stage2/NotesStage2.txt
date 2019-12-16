@@ -4,6 +4,34 @@ I do splitting of channels via this commands Image-> Color ->Split Channels. Aft
 
 Afterwards, the other pictures are splitted, and for each channel their according plugin is applied. Than commands Image->Color->merge channels (respective names of the channels picked)-> Apply. Next Image-> Color-> Channels Tool -> More-> Convert to RGB is applied. After all these steps, the modified picture is ready for the binary plugins. 
 
-The results in all three pictures is significantly better, the only average result is after applying plugin3, which in three cases did not bring lips or ears, but rather an empty white sheet with some black marks. 
+The results in all three pictures is significantly better, the only average result is after applying plugin3, which in three cases did not bring lips or ears, but rather an empty white sheet with some black marks. I think the explanation is too much red color generalization, which led to no much difference in red in skin and red in lips. 
+
+The pluginsRed, Blue, and Green were made with minor error in the algorithm where the H1 reference histogram was calculated with Hs pixels. After finding the error, I have changed all the pictures which had worse results and replaced them with the real results. However, in the case of 60a where I think the result was average for both cases, thus I thought to keep it as an interesting case.
+
+Without finding the error, we were getting a very bright picture, which I think was very nice algorithm for brightness and more exact picture getting as seen in  the results xx_modified (the real algorithms xx_modified2).  
 
 FOr HSV channels 
+
+Again for reference is take the picture 61a, wose benchmark histogram is used in all other three cases. It is selected as it showed the exact behavior searched after applying binary_layers. 
+
+Splitting of channels is done via the following steps: Image -> Type -> HSB Stack -> Apply. Next, Image -> Stack -> Stack to Images . After it, the plugins of respective channels is applied, found in Stage0 -> A09150024 subfolder. Next Image -> Images to Stack is applied. Than, Image -> Type -> RGB Color is selected, after which the image is ready for the binary_layer plugins. 
+
+
+The results are interesting, as after applying all three channels simultaneously on the channels, the picture appears to be too abnormal with face covered in electric green or blue mostly (xx_modifiedAll). Thus, I have decided to change only brightness of the picture by applying pluginBrightness plugin, and as the result I have encountered very good outcomes from the binary layers found in the subfoulder with names xx_modifiedB.
+
+The same way as above, the results above was made with wrong algorithm, where reference histogram H1's ith value was being incremented with H's ith value, thus the results above are not accurate, however I believe that they are pretty satisfactory and good ones, thus I decided to keep them. 
+
+The real results can be seen in the pictures xx_modifiedA.
+
+The results are very good, besides the 59a_modifiedA_Binary_Layer_3 result, which's outcome is the white page sadly.  
+
+
+The error that I was talking is right here 
+for (int i = 1; i < H.length; i++){
+    H[i] = H[i-1] + H[i];
+    Red[i] = H[i];	
+    H1[i] = H1[i -1] + H[i];	<- H->H1
+}
+
+
+  

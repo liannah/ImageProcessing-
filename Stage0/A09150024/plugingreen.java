@@ -40,14 +40,18 @@ Green[0] = H[0];
 for (int i = 1; i < H.length; i++){
     H[i] = H[i-1] + H[i];
     Green[i] = H[i];	
-    H1[i] = H1[i -1] + H[i];	
+    H1[i] = H1[i -1] + H1[i];	
 }
 
-for (int i = 1; i < l; i++){
+for (int i = 0; i < l; i++){
      Green[i] = Green[i] / Green[l-1];
      H1[i] = H1[i] / H1[l-1]; 	
 }
 
+for(int i =0; i < l; i++){
+ij.IJ.log("Hist" + " " + H1[i]);
+
+}
 
 int[] result = matchHistograms(Green, H1);
 
