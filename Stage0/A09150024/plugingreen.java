@@ -78,7 +78,7 @@ int K = hA.length;
  do {
  fhs[a] = j;
  j--;
- } while (j >= 0 && hA[a] <= hR[j]);
+ } while (j >= 0 && hA[a] <= hR[j]); // hA && hR are used as we                                 //have already computed the normcum
  }
  return fhs;
  }
